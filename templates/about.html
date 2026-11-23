@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8f4">
+  <meta name="description"
+    content="MOODIFY turns facial-expression estimates into personal music discovery using a local CSV song library.">
+  <title>MOODIFY | About Us</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css', v='16') }}">
+</head>
+
+<body>
+  <div class="app-main">
+    <header class="site-header">
+      <nav class="navbar wrap" aria-label="Main navigation">
+        <a href="/" class="logo">
+          <span class="logo-mark"><i class="fa fa-music" aria-hidden="true"></i></span> MOODIFY
+        </a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="nav-links" id="navLinks">
+          <a href="/"><i class="fa fa-home nav-icon" aria-hidden="true"></i>Home</a>
+          <a href="/detect"><i class="fa fa-camera nav-icon" aria-hidden="true"></i>Mood Detector</a>
+          <a href="/music"><i class="fa fa-music nav-icon" aria-hidden="true"></i>Music Library</a>
+          <a href="/about"><i class="fa fa-info-circle nav-icon" aria-hidden="true"></i>About</a>
+          <a class="nav-cta" href="/detect">Try it now <i class="fa fa-external-link" aria-hidden="true"></i></a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="inner-hero">
+        <div class="wrap">
+          <div class="eyebrow">BEHIND THE EXPERIENCE / 03</div>
+          <h1>Music discovery with<br><span class="gradient-text">a human rhythm.</span></h1>
+          <p>MOODIFY is a simple music-discovery project that turns an expression estimate into song suggestions.</p>
+        </div>
+      </section>
+
+      <section class="wrap about-content">
+        <div class="about-intro">
+          <div class="about-intro-heading">
+            <div class="eyebrow">OUR IDEA</div>
+            <h2>Music can meet<br>the moment you're in.</h2>
+          </div>
+          <p class="about-intro-copy">MOODIFY gives you a camera preview, an expression estimate, and songs from a music library you can update.
+            The suggestions are for discovering music, not for deciding how someone really feels.</p>
+        </div>
+
+        <div class="section-heading about-features-heading">
+          <div class="eyebrow">WHAT MOODIFY CAN DO</div>
+          <h2>Music discovery, made simple.</h2>
+        </div>
+
+        <div class="tech-grid">
+          <article>
+            <span>01</span>
+            <div class="tech-icon"><i class="fa fa-smile-o" aria-hidden="true"></i></div>
+            <h3>View an expression estimate</h3>
+            <p>Start the camera to see live expression estimates. You choose when to start and stop.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <div class="tech-icon"><i class="fa fa-music" aria-hidden="true"></i></div>
+            <h3>Find songs for a mood</h3>
+            <p>Capture a frame to match its estimated expression to a music category.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <div class="tech-icon"><i class="fa fa-folder-open-o" aria-hidden="true"></i></div>
+            <h3>Explore your library</h3>
+            <p>Browse suggested tracks and see which music categories are available.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <div class="tech-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+            <h3>Make it your own</h3>
+            <p>Update the song library with your favourite tracks, artists, genres, and languages.</p>
+          </article>
+        </div>
+
+        <div class="about-process">
+          <div class="about-process-heading">
+            <div class="eyebrow">THE PIPELINE</div>
+            <h2>From a live frame<br>to a song suggestion.</h2>
+          </div>
+
+          <ol class="about-process-steps">
+            <li>
+              <b>Browser sampling</b>
+              <span>Start the camera to see a live preview and expression estimates.</span>
+            </li>
+            <li>
+              <b>Image validation</b>
+              <span>When you capture, the app checks the image before analyzing it.</span>
+            </li>
+            <li>
+              <b>Face and expression</b>
+              <span>The app finds a face and estimates its most visible expression.</span>
+            </li>
+            <li>
+              <b>CSV matching</b>
+              <span>The expression estimate maps to a music category, and matching songs are shown.</span>
+            </li>
+          </ol>
+        </div>
+
+        <div class="privacy-block" id="privacy">
+          <div class="privacy-heading">
+            <div class="eyebrow">PRIVACY & LIMITATIONS</div>
+            <h2>Clear about what the model can do.</h2>
+          </div>
+
+          <div class="privacy-copy">
+            <p><strong>Camera access:</strong> The browser requests permission. While live analysis is active, a
+              downscaled frame is sent to this app after each analysis completes. Press Stop to end the camera and
+              analysis.</p>
+            <p><strong>Local processing:</strong> On localhost, frames are analyzed on your computer and are not saved
+              to disk or sent to a cloud service by this project.</p>
+            <p><strong>Not a diagnosis:</strong> Facial-expression models can be wrong. They do not know your inner
+              feelings, personality or mental-health state. Treat results as an experimental estimate, not a fact.</p>
+            <p><strong>Third-party links:</strong> Song search links open YouTube in a new tab. MOODIFY does not stream
+              or host copyrighted music.</p>
+          </div>
+        </div>
+
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrap footer-grid">
+        <div>
+          <a href="/" class="logo">
+            <span class="logo-mark"><i class="fa fa-music" aria-hidden="true"></i></span> MOODIFY
+          </a>
+          <p class="footer-copy">Music discovery shaped around your mood. Explore recommendations and make the library
+            your own.</p>
+        </div>
+        <div>
+          <h4>Discover</h4>
+          <a href="/">Home</a>
+          <a href="/detect">Mood detector</a>
+          <a href="/music">Music library</a>
+        </div>
+        <div>
+          <h4>MOODIFY</h4>
+          <a href="/about">About MOODIFY</a>
+          <a href="/about#privacy">Privacy & limitations</a>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>&copy; 2026 MOODIFY. All rights reserved.</span>
+      </div>
+    </footer>
+    <script>
+      let menuToggle = document.getElementById("menuToggle");
+      let navLinks = document.getElementById("navLinks");
+
+      menuToggle.addEventListener("click", function () {
+        let isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+    </script>
+  </div>
+</body>
+
+</html>

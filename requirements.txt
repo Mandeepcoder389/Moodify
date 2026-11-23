@@ -1,0 +1,6 @@
+Flask>=3.0,<4.0
+opencv-python>=4.9,<4.12
+deepface>=0.0.93
+tf-keras>=2.15
+numpy>=1.26,<2.0
+python-dotenv>=1.0
